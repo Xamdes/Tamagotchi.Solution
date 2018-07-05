@@ -1,12 +1,12 @@
 cd ..
 git add .
 
-if [ -s = Tamagotchi ]
+if [ -s = "$1" ]
 then
-  git commit -m 
+  git commit -m "$2"
 fi
 
-if [ -p = Tamagotchi ]
+if [ -p = "$1" ]
 then
-  git-pair-commit -m 
+  git-pair-commit -m "$2"
 fi
