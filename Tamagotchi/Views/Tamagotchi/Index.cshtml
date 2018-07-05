@@ -1,0 +1,16 @@
+<h1>Tamagtochis</h1>
+<ul>
+  @foreach(var tama in Model)
+  {
+    <li><a href='/life/@tama.GetId()'>@tama.GetName()</a></li>
+    <ul>
+      <li>Hungry: @tama.isHungry()</li>
+      <li>Lonely: @tama.isLonely()</li>
+      <li>Sleepy: @tama.isSleepy()</li>
+    </ul>
+  }
+</ul>
+<a href='/life/new'>Add new Tamagotchi</a>
+<form action="/life/delete" method="post">
+  <button type="submit" name="button">Destroy all Tamagotchis</button>
+</form>
